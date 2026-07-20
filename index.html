@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+</head>
+<body>
+    Redirecting...
+
+    <script>
+        async function start() {
+            const response = await fetch('./config.json');
+            const config = await response.json();
+            window.location.replace(config.webUrl);
+        }
+
+        start();
+    </script>
+</body>
+</html>
